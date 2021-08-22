@@ -48,29 +48,26 @@ function createFormHandler(e) {
 function postFetch(name, start_date, end_date, destination_id) {
    fetch(endPoint, {
        method: 'POST',
-       headers: {"Content-Type": "application/json",
-                "accept": "application/json",
-                "access_Control-Allow-Origin": "*"},
+       headers: {"Content-Type": "application/json"},
        body: JSON.stringify({
-           name: name,
-           start_date: start_date,
-           end_date: end_date,
-           destination_id: destination_id
+           name,
+           start_date,
+           end_date,
+           destination_id
        })
-   }) 
-.then(response => response.json())
-.then(travel_plan => {
-    console.log(travel_plan);
-//     const travelPlanData = travel_plan.data
-//     const travelPlanHTML = 
-//     `<div data-id=${travel_plan.id}>
-//     ${travelPlanData.attributes.name}
-//     ${travelPlanData.attributes.start_date}
-
-//     ${travelPlanData.attributes.end_date}
-//     ${travelPlanData.attributes.destination.name}
-// <button data-id=${travelPlanData.id}>delete</button>
-// </div>`
-// document.querySelector('travel-plan-container').innerHTML += travelPlanHTML
-})
+    })
+    .then(response => response.json())
+    .then(travel_plan => {
+        // console.log(travel_plan)
+        const travelPlanData = travel_plan
+        const travelPlanHTML = `<div data-id=${travel_plan.id}>
+            ${travelPlanData.name}
+            ${travelPlanData.start_date}
+            ${travelPlanData.end_date}
+            ${travelPlanData.destination}
+    <button data-id=${travelPlanData.id}>delete</button>
+    </div>`
+        document.querySelector('#travel-plan-container').innerHTML += travelPlanHTML
+        })
+    
 }
