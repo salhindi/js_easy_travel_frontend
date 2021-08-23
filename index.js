@@ -16,6 +16,7 @@ function getTravelPlans() {
             // console.log(travel_plans)
            render(travel_plan)
         })
+
     })
 }
 
@@ -54,7 +55,11 @@ function postFetch(name, start_date, end_date, destination_id) {
        })
     })
     .then(response => response.json())
+    .catch(err => console.log(err))
+
     .then(travel_plan => {
+       console.log(travel_plan.error)
+
        const travelPlanData = travel_plan.data
         render(travelPlanData)
         })  
