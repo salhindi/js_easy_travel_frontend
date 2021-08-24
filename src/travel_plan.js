@@ -10,7 +10,6 @@ class TravelPlan {
     }
      
 
-
 renderTravelPlanCard() {
     return `<div data-id=${this.id}>
     <h1>${this.name}</h1>

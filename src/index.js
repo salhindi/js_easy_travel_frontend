@@ -1,7 +1,5 @@
 const endPoint = "http://localhost:3000/api/v1/travel_plans"
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
    getTravelPlans()  
    const createTravelPlanForm = document.querySelector("#create-travel-plan-form")
@@ -13,11 +11,8 @@ function getTravelPlans() {
     .then(response => response.json())
     .then(travel_plans => {
         travel_plans.data.forEach(travelPlan => {
-            // debugger
             let newTravelPlan = new TravelPlan(travelPlan, travelPlan.attributes)
      document.querySelector('#travel-plan-container').innerHTML += newTravelPlan.renderTravelPlanCard()
-
-        //    render(travelPlan)
         
         })
 
@@ -51,12 +46,9 @@ function postFetch(name, start_date, end_date, destination_id) {
     .catch(err => console.log(err))
 
     .then(travel_plan => {
-    //    console.log(travel_plan.error)
 
        const travelPlanData = travel_plan.data
        let newTravelPlan = new TravelPlan(travelPlanData, travelPlanData.attributes)
        document.querySelector('#travel-plan-container').innerHTML += newTravelPlan.renderTravelPlanCard()
-  
-        // render(travelPlanData)
         })  
 } 

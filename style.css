@@ -1,0 +1,22 @@
+  
+.form-container {
+    position: relative;
+    box-shadow: 4px 4px 8px 0 #89bcff;
+    transition: 0.3s;
+    width: 32%;
+    margin-top: 15px;
+    
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .travel-plan-container {
+    position: relative;
+    text-align: center;
+    box-shadow: 8px 8px 8px 0 #006188;
+    transition: 0.3s;
+    width: 32%;
+    margin-top: 20px;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  
