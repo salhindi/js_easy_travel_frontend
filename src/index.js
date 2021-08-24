@@ -13,28 +13,18 @@ function getTravelPlans() {
     .then(response => response.json())
     .then(travel_plans => {
         travel_plans.data.forEach(travelPlan => {
-            debugger
-            let newTravelPlan = new TravelPlan(travelPlan)
+            // debugger
+            let newTravelPlan = new TravelPlan(travelPlan, travelPlan.attributes)
+     document.querySelector('#travel-plan-container').innerHTML += newTravelPlan.renderTravelPlanCard()
 
-           render(travelPlan)
+        //    render(travelPlan)
         
         })
 
     })
 }
 
-function render(travel_plan) {
-    const travelPlanHTML = `<div data-id=${travel_plan.id}>
-    <h1>${travel_plan.attributes.name}</h1>
-    <p>${travel_plan.attributes.start_date}</p>
-    <p>${travel_plan.attributes.end_date}</p>
-    <p>${travel_plan.attributes.destination.city}</p>
-    <button data-id=${travel_plan.id}>description</button>
-    </div>
-    <br></br>`;
 
-    document.querySelector('#travel-plan-container').innerHTML += travelPlanHTML
-}
 
 function createFormHandler(e) {
     e.preventDefault()
@@ -61,9 +51,12 @@ function postFetch(name, start_date, end_date, destination_id) {
     .catch(err => console.log(err))
 
     .then(travel_plan => {
-       console.log(travel_plan.error)
+    //    console.log(travel_plan.error)
 
        const travelPlanData = travel_plan.data
-        render(travelPlanData)
+       let newTravelPlan = new TravelPlan(travelPlanData, travelPlanData.attributes)
+       document.querySelector('#travel-plan-container').innerHTML += newTravelPlan.renderTravelPlanCard()
+  
+        // render(travelPlanData)
         })  
 } 
