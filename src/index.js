@@ -12,9 +12,12 @@ function getTravelPlans() {
     fetch(endPoint)
     .then(response => response.json())
     .then(travel_plans => {
-        travel_plans.data.forEach(travel_plan => {
-            // console.log(travel_plans)
-           render(travel_plan)
+        travel_plans.data.forEach(travelPlan => {
+            debugger
+            let newTravelPlan = new TravelPlan(travelPlan)
+
+           render(travelPlan)
+        
         })
 
     })
@@ -63,4 +66,4 @@ function postFetch(name, start_date, end_date, destination_id) {
        const travelPlanData = travel_plan.data
         render(travelPlanData)
         })  
-}
+} 
