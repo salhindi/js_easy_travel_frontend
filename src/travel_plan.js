@@ -19,6 +19,8 @@ renderTravelPlanCard() {
     </div>
     <br></br>`;
 }
+
+
 }
 
 

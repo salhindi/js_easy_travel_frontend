@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="src/destination.js"></script>
+    <script type="text/javascript" src="src/index.js"></script>
+    <script type="text/javascript" src="src/travel_plan.js"></script>
+    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>    
+    <div class="form-container">
+        <form id="create-travel-plan-form">
+            <h3>Plan a Trip!</h3>
+
+        <input id='input-name' type="text" name="name" placeholder="title your trip" class="input-text">
+        <br>
+        <input id='input-start_date' name="start_date" type="date" class="input-date">
+        <input id='input-end_date' name="end_date" type="date" class="input-date">
+
+        <select id="select-destination">
+            <option value="">-- Select --</option>
+           
+        </select>
+  
+            <input id= 'create-button' type="submit" name="submit" value="Plan Your Trip"
+        class="submit">
+
+        </form>
+    
+    <div class='travel-plan-container' id="travel-plan-container">
+    
+    </div>
+
+
+</body>
+</html>
