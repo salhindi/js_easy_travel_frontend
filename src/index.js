@@ -73,6 +73,7 @@ function postPlan(name, start_date, end_date, destination_id) {
             const travelPlanData = travel_plan.data
             let newTravelPlan = new TravelPlan(travelPlanData, travelPlanData.attributes)
             document.querySelector('#travel-plan-container').innerHTML += newTravelPlan.renderTravelPlanCard()
+            window.scrollTo(0, document.querySelector('#travel-plan-container').scrollHeight);
         })  
 } 
 
