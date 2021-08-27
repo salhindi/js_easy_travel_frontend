@@ -1,4 +1,6 @@
 .container {
+  background-color: #FFC1B2;
+
   max-width: 960px;
 }
 
@@ -6,13 +8,17 @@
  * Custom translucent site header
  */
 
+ .main {
+  background-color: #DCE6E5;
+}
+
 .site-header {
   background-color: #FDF3DA;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
 .site-header a {
-  color: #8e8e8e;
+  color:  #FDF3DA;
   transition: color .15s ease-in-out;
 }
 .site-header a:hover {
@@ -24,7 +30,7 @@
  * Dummy devices (replace them with your own or something else entirely!)
  */
 
-.product-device {
+/* .product-device {
   position: absolute;
   right: 10%;
   bottom: -30%;
@@ -33,9 +39,9 @@
   background-color: #333;
   border-radius: 21px;
   transform: rotate(30deg);
-}
+} */
 
-.product-device::before {
+/* .product-device::before {
   position: absolute;
   top: 10%;
   right: 10px;
@@ -44,7 +50,7 @@
   content: "";
   background-color: rgba(255, 255, 255, .1);
   border-radius: 5px;
-}
+} */
 
 .product-device-2 {
   top: -25%;
@@ -67,3 +73,4 @@
     flex: 1;
   }
 }
+

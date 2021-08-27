@@ -8,20 +8,20 @@ class Destination {
 
     }
     populateSelect() {
-    const ele = document.getElementById('select-destination');
-        ele.innerHTML = ele.innerHTML +
-            '<option text="' + this.id + '">' + this.city + '</option>';   
-    }
+        const ele = document.getElementById('select-destination');
+            ele.innerHTML = ele.innerHTML +
+                '<option text="' + this.id + '">' + this.city + '</option>';   
+    } 
+    
+    renderDestinationCard() {
+        return `<div data-id=${this.id}>
+        <h1>${this.city}</h1>
+        <p>${this.country}</p>
+        <p>${this.description}</p>
+        </div>
+        <br></br>`;
+    } 
 }
 
+Destination.all = []
 
-    Destination.all =[]
-
-    // renderDestinationCard() {
-    //     return `<div data-id=${this.id}>
-    //     <h1>${this.city}</h1>
-    //     <p>${this.country}</p>
-    //     <p>${this.description}</p>
-    //     </div>
-    //     <br></br>`;
-    // } 
