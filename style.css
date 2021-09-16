@@ -18,11 +18,11 @@
   backdrop-filter: saturate(180%) blur(20px);
 }
 .site-header a {
-  color:  #FDF3DA;
+  color:  #110e08;
   transition: color .15s ease-in-out;
 }
 .site-header a:hover {
-  color: #fff;
+  color: rgb(12, 3, 3);
   text-decoration: none;
 }
 
